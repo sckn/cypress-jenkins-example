@@ -2,6 +2,7 @@ node {
     stage("Initalize") {
         def dockerHome = tool 'mydocker'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
+        env.DOCKER_HOST =  "tcp://192-168-1-46.sslip.io:2375"
     }
 }
 
