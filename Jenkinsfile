@@ -15,7 +15,7 @@ pipeline {
     }
   }
 
- /* stages {
+ stages {
     // first stage installs node dependencies and Cypress binary
     stage('build') {
       steps {
@@ -72,7 +72,7 @@ pipeline {
 
     }
   }
-
+/*
   post {
     // shutdown the server running in the background
     always {
@@ -80,4 +80,5 @@ pipeline {
       sh 'pkill -f http-server'
     }
   }*/
+    
 }
