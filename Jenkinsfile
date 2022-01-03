@@ -17,7 +17,12 @@ pipeline {
             steps {
                 sh 'docker pull node:16.13.1-alpine'
                 timeout(time: 15, unit: "MINUTES") {
-                
+                    withDockerContainer(image: 'node:16.13.1-alpine') {
+                        sh '''
+                            node --version
+                        '''
+                    }
+
                 }
             }
         }
