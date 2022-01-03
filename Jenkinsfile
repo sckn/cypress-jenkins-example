@@ -8,6 +8,8 @@ node {
 }
 
 pipeline {
+     stages {
+     stage('Build') {
    agent {
         // Cannot use docker agent type because image will not be pulled fresh
         // each time. Instead, manually insert docker pull then run with the
@@ -29,7 +31,8 @@ pipeline {
           }
             
         }
-        
+    }
+    }  
     }
    
 }
