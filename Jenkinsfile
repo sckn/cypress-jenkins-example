@@ -12,9 +12,14 @@ pipeline {
         docker { image 'node:16.13.1-alpine' }
     }
     stages {
-        stage('Test') {
+        stage('ENV test') {
             steps {
-                sh 'node --version'
+                sh "echo 'echo hello' > test_script"
+                sh "chmod +x ./test_script"
+                withEnv(["PATH+EXTRA=${WORKSPACE}"]) {
+                    sh "env | grep PATH"
+                    sh "node --versio"
+                }
             }
         }
     }
