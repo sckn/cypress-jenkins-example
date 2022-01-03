@@ -3,6 +3,7 @@ node {
         def dockerHome = tool 'docker'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
         env.DOCKER_HOST =  "tcp://192-168-1-46.sslip.io:2375"
+        sh "echo $PATH"
     }
 }
 
@@ -20,6 +21,7 @@ pipeline {
   }
 
  stages {
+     sh "echo $PATH"
     // first stage installs node dependencies and Cypress binary
     stage('build') {
       steps {
