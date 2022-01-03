@@ -16,7 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'docker pull node:16.13.1-alpine'
-                sh 'docker run -ti node:16.13.1-alpine node --version'
+                sh 'docker run -i node:16.13.1-alpine node --version'
             }
         }
     }
