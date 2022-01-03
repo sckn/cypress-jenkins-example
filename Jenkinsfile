@@ -15,7 +15,7 @@ pipeline {
     }
   }
 
-  stages {
+ /* stages {
     // first stage installs node dependencies and Cypress binary
     stage('build') {
       steps {
@@ -79,5 +79,5 @@ pipeline {
       echo 'Stopping local server'
       sh 'pkill -f http-server'
     }
-  }
+  }*/
 }
