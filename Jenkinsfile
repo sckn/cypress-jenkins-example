@@ -8,6 +8,8 @@ node {
 
 
 pipeline {
+          tools {dockerTool  "mydocker" } 
+
   agent {
     // this image provides everything needed to run Cypress
     docker {
