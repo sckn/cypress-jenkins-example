@@ -12,6 +12,12 @@ pipeline {
         docker { image 'node:16.13.1-alpine' }
     }
     stages {
-   
+       echo "Docker Build-2 ..."
+                // Run the Docker tool to build the image
+                script {
+                    docker.withTool('docker') {
+                        node --version
+                    }
+                }
     }
 }
