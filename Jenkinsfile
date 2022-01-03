@@ -10,7 +10,7 @@ node {
 
 pipeline {
     agent {
-        node { label 'Built-In Node' }
+        node { label 'built-in' }
     }
     stages {
         stage('Test') {
