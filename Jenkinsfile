@@ -16,7 +16,7 @@ pipeline {
                 // Run the Docker tool to build the image
                 script {
                     docker.withTool('docker') {
-                        node --version
+                        sh 'node --version'
                     }
                 }
     }
