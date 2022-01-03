@@ -10,12 +10,15 @@ node {
 
 pipeline {
     agent {
-        node { label 'nodejs' }
+        node { label 'Built-In Node' }
     }
     stages {
         stage('Test') {
             steps {
                 sh 'docker pull node:16.13.1-alpine'
+                timeout(time: 15, unit: "MINUTES") {
+                
+                }
             }
         }
     }
